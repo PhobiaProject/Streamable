@@ -1,0 +1,50 @@
+getgenv().Phobia = {
+    ["Features"] = {
+        ["Aiming"] = {
+            ["Silent"] = {
+                ["Type"] = "Target", -- Fov, Target
+                ["SilentPart"] = "Head",
+                ["AirPart"] = "LowerTorso",
+                ["ClosestPart"] = true,
+                ["Prediction"] = 0.1212549,
+                ["FovRadius"] = 200
+            },
+            ["Aimbot"] = {
+                ["Enabled"] = true,
+                ["Notify"] = true,
+                ["AimbotBind"] = "C",
+                ["Prediction"] = 0,
+                ["Smoothness"] = 0.0700,
+                ["AimPart"] = "Head",
+                ["ClosestPart"] = false
+            },
+            ["TriggerBot"] = {
+                ["Keybind"] = "T",
+                ["Notification"] = true,
+                ["TriggerBotDelay"] = 0.0001,
+                ["BlacklistedItem"] = {"[Knife]"}
+            },
+        },
+        ["Misc"] = {
+            ["Resolver"] = {
+                ["Enabled"] = true,
+                ["Keybind"] = "J",
+                ["Notifications"] = true,
+                ["Adjust"] = 0.2
+            },
+            ["Checks"] = {
+                ["Knocked"] = true
+            }
+        }
+    },
+    ["Settings"] = {
+        ["Intro"] = {
+            ["Blur"] = true
+        },
+        ["InGame"] = {
+            ["FpsCap"] = {
+                ["Enabled"] = true,
+                ["Value"] = 144
+        },
+    }
+}
