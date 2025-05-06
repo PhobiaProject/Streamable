@@ -1,0 +1,182 @@
+--- just replace ur key and execute
+script_key="key there";
+--- table
+getgenv().zybrin = {
+    Options = {
+        ['Intro'] = true,
+        ['Intro_Type'] = "zybrin_intro",
+        ['Indicator'] = true, 
+        ['IndicatorColor'] = Color3.fromRGB(100, 100, 255),  
+        ['Font'] = "Proggy",   
+        ['FPS_Cap'] = math.huge, 
+        ['panic_key'] = "p", 
+        ['double_press'] = true, 
+
+    },
+Silent = { --- use on dh ripoffs
+    ['Enabled'] = false,
+    ['Prediction'] = 0.133,
+    ['HitPart'] = "HumanoidRootPart",
+    ['Key'] = "E", 
+    ['HitChance'] = 90, 
+    ['AlwaysMode'] = false, -- if false then the silent cant be turned off
+    ['ThirdPerson'] = true,
+    ['FirstPerson'] = false,
+    ['Notifications'] = false,
+    ['air_part'] = false, -- if false just uses the hitpart
+    ['air_hit_part'] = "UpperTorso" 
+},
+FOV = {
+  ['Silent'] = {
+       ['Visible'] = false,
+       ['Filled'] = false,
+       ['Sides'] = 100,
+       ['Size'] = 50,
+       ['Transparency'] = 1,
+       ['Thickness'] = 0.7,
+       ['Color'] = Color3.fromRGB(1, 1, 1),
+},
+Camlock = { -- fov settings
+       ['UseFov'] = false, 
+       ['Visible'] = false, 
+       ['Filled'] = false,
+       ['Sides'] = 20,
+       ['Size'] = 50,
+       ['Transparency'] = 1,
+       ['Thickness'] = 1,
+       ['Color'] = Color3.fromRGB(100, 100, 255)
+
+     },
+},
+FovType = {
+    ['Target'] = true,
+},
+
+Camlock = { 
+    ['Enabled'] = true,
+    ['Key'] = "E",
+    ['Prediction'] = 0.12,
+    ['HitPart'] = "HumanoidRootPart", 
+    ['air_part'] = false,
+    ['air_hitPart'] = "LowerTorso", -- changes
+    ['Distance'] = 600, -- studs 
+    ['Smoothing'] = true, -- MUST ALWAYS BE ON
+    ['Smoothness'] = 0.081
+    
+
+},
+Shake = { 
+    ['Shake'] = true, 
+    ['Shake_X'] = 0.2, 
+    ['Shake_Y'] = 0,
+    ['Shake_Z'] = 0 
+},
+
+
+
+Checks = { -- 
+    Silent = {
+        ['knock_check'] = true, 
+        ['crew_check'] = true, 
+        ['wall_check'] = false, 
+        ['friend_check'] = true, 
+        ['grab_check'] = true, 
+        ['anti_curve'] = true 
+    },
+    Camlock = {
+        ['wall_check'] = false, 
+        ['knock_check'] = true,
+
+    }
+},
+
+AntiGroundShots = {
+    ['Enabled'] = false,
+    ['DelayGroundShot'] = 0.5
+},
+
+AutoPrediction = {
+ ['Enabled'] = true,
+    ['NewPred'] = 0.1, -- changes the pred after so many ms
+    ['Ping_10'] = 0.10,
+    ['Ping_20'] = 0.171,
+    ['Ping_30'] = 0.172,
+    ['Ping_40'] = 0.1273,
+    ['Ping_50'] = 0.125,
+    ['Ping_60'] = 0.1267,
+    ['Ping_70'] = 0.1335,
+    ['Ping_80'] = 0.734,
+    ['Ping_90'] = 0.6365,
+    ['Ping_100'] = 0.1174,
+    ['Ping_110'] = 0.172,
+    ['Ping_120'] = 0.162,
+    ['Ping_130'] = 0.123,
+    ['Ping_140'] = 0.136,
+    ['Ping_150'] = 0.16,
+    ['Ping_160'] = 0.51
+},
+
+Triggerbot = {
+    triggerbot = {
+        ['Enabled'] = true,
+        ['Key'] = "z", 
+        ['Delay'] = 0.1,
+    },
+    Checks = {
+        ['friend_check'] = true,
+        ['crew_check'] = false, 
+    }
+},
+
+
+
+
+Movement = {
+    Walkspeed = {
+        Enabled = true,
+        Key = "z", 
+        Speed = 50,
+    },
+    Jumppower = {
+        Enabled = true,
+        Key = "x", 
+        Power = 120,
+    }
+}
+
+}
+
+
+
+
+getgenv().ESP = {
+    Enabled = true, 
+    KeybindEnabled = true, 
+    Key = Enum.KeyCode.Q, 
+
+    Font = "Proggy", 
+    Color1 = Color3.fromRGB(100, 100, 255), 
+    Color2 = Color3.fromRGB(209, 245, 66), 
+
+    Highlight = {
+        Enabled = true, 
+        KeybindEnabled = true, 
+        Key = Enum.KeyCode.Q, 
+
+        FillColor = Color3.fromRGB(255, 0, 0),
+        OutlineColor = Color3.fromRGB(255, 255, 255), 
+        FillTransparency = 0.5, 
+        OutlineTransparency = 0, 
+    }
+}
+
+
+getgenv().spin360 = {
+    Spin = { 
+        Enabled = false, 
+        Key = "X", 
+        Degrees = 360, 
+        Speed = 3000, 
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ff0354d3699bd13f05a6b399b21bb111.lua"))()
